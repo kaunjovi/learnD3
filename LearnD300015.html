@@ -9,7 +9,14 @@
 	
 	<script type="text/javascript">
 		d3.select("p").text("Hello world from D3 js.") ; 	
-		d3.select("p").append("p").text("Added another para to the skillset.") ; 
+		d3.select("body").append("p").text("Added another para to the skillset.") ;
+		
+		d3.select("body")
+			.append("p")
+			.style("color","red")
+			.text("Added another para. Red and stylist.");
+
+		
 	</script>
 
 </body>
