@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Learn D3 series</title>
+<script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+</head>
+<body>
+
+	<p>Bar no bar.</p>
+
+	<script type="text/javascript">
+		
+		var canvas = d3.select("body")
+			.append("svg") 
+			.attr("width", 500)
+			.attr("height", 500);
+		
+		var dataArray = [ 10, 20, 30] ; 
+		
+		var bars = canvas.selectAll("rect")
+			.data(dataArray)
+			.enter()
+				.append("rect")
+				.attr("width", function(d){return d*10 ; })
+				.attr("height", 50) 
+				.attr("y", function(d,i){ return i*100; } ); 
+		
+	</script>
+
+</body>
+</html>
+
+<!-- 
+https://www.youtube.com/watch?v=qIIKw2RFNlU&list=PL6il2r9i3BqH9PmbOf5wA5E1wOG3FT22p&index=2&spfreload=5 
+cmd+i -> format HTML 
+
+-->
+
+
